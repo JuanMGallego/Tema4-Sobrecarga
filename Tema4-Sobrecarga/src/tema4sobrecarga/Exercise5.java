@@ -16,13 +16,21 @@ public class Exercise5 {
 	
 	static void numerosAleatorios (int cuant1, int maxNum) {
 	
-		System.out.println((int) (Math.random()*(100-maxNum)));
+		for (int i = 1 ; i <= cuant1 ; i++) {
+			
+			System.out.println((int) (Math.random()*(maxNum+1)));
+			
+		}
 		
 	}
 	
 	static void numerosAleatorios (int cuant1, int minNum, int maxNum) {
 		
-		System.out.println((int) (Math.random()*(100-maxNum)-minNum));
+		for (int i = 1 ; i <= cuant1 ; i++) {
+		
+			System.out.println((int) (Math.random()*(maxNum+1-minNum))+minNum);
+		
+		}
 		
 	}
 	
@@ -42,7 +50,7 @@ public class Exercise5 {
 		System.out.println();
 		System.out.print("Introduzca una cantidad de números aleatorios a generar: ");
 		cuant1 = sc.nextInt();
-		System.out.println("Introduzca el máximo: ");
+		System.out.print("Introduzca el máximo: ");
 		maxNum = sc.nextInt();
 		System.out.println();
 		numerosAleatorios(cuant1, maxNum);
@@ -50,9 +58,9 @@ public class Exercise5 {
 		System.out.println();
 		System.out.print("Introduzca una cantidad de números aleatorios a generar: ");
 		cuant1 = sc.nextInt();
-		System.out.println("Introduzca el mínimo: ");
+		System.out.print("Introduzca el mínimo: ");
 		minNum = sc.nextInt();
-		System.out.println("Introduzca el máximo: ");
+		System.out.print("Introduzca el máximo: ");
 		maxNum = sc.nextInt();
 		System.out.println();
 		numerosAleatorios(cuant1, minNum, maxNum);
